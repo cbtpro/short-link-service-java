@@ -1,0 +1,19 @@
+server:
+  port: 9901
+  domain: http://127.0.0.1
+spring:
+  application:
+    name: shorten-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/short_link?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: short_link
+    password: short_link
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        "[show_sql]": true
+        "[format_sql]": true
